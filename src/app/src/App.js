@@ -2,8 +2,8 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  const [newTodo, setNewTodo] = useState('');
+  const [todos, setTodos] = useState([]); // state for storing todos
+  const [newTodo, setNewTodo] = useState(''); // state for new todo input
 
   // Fetch todos from the server
   const fetchTodos = async () => {
@@ -43,7 +43,7 @@ function App() {
         const data = await response.json();
         // Update the todos state with the new todo
         setTodos([...todos, data]);
-        setNewTodo('');
+        setNewTodo(''); // clear the new todo input
       } catch (error) {
         console.error(error);
       }
@@ -88,7 +88,7 @@ function App() {
     const intervalId = setInterval(fetchTodos, pollingInterval);
 
     return () => {
-      // Cleanup the interval when the component unmounts
+      // Cleanup the polling interval when the component unmounts
       clearInterval(intervalId);
     };
   }, []);
