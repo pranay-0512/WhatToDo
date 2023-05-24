@@ -84,7 +84,7 @@ function App() {
 
     addHardcodedTodos();
 
-    const pollingInterval = 1000; // Polling interval of 2 second for updates from server
+    const pollingInterval = 1000; // Polling interval of 1 second for updates from server
     const intervalId = setInterval(fetchTodos, pollingInterval);
 
     return () => {
