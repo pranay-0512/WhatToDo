@@ -75,7 +75,7 @@ function App() {
 
           const data = await response.json();
           // Update the todos state with the new todo
-          setTodos((prevTodos) => [...prevTodos, data]);
+          setTodos([...todos, data]);
         }
       } catch (error) {
         console.error(error);
