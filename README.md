@@ -3,6 +3,7 @@
 
 Watch the working.mp4 video to see the working solution.
 
+This is a full-stack todo list app that uses Django for the backend, React.js for the frontend, and MongoDB as the database. The code is containerized with all dependencies using Docker, making it easy to deploy and run the app on any platform.
 
 For local setup, 
 
